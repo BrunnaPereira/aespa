@@ -1,0 +1,584 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   CONFIGURAÇÃO DA PÁGINA
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   TELA PRINCIPAL
+========================= */
+
+.tela-inicial {
+
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            #d8c2ff 0%,
+            #b993ff 30%,
+            #8d65d8 65%,
+            #56358f 100%
+        );
+}
+
+
+/* =========================
+   BRILHO CENTRAL
+========================= */
+
+.tela-inicial::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 700px;
+    height: 700px;
+
+    left: 50%;
+    top: 45%;
+
+    transform: translate(-50%, -50%);
+
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.20) 0%,
+        rgba(255, 255, 255, 0.08) 30%,
+        transparent 70%
+    );
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.conteudo {
+
+    position: relative;
+
+    z-index: 5;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 90%;
+
+    animation: aparecer 1.5s ease;
+}
+
+
+/* =========================
+   KWANGYA
+========================= */
+
+h1 {
+
+    font-family: "Cinzel", serif;
+
+    font-size: clamp(70px, 11vw, 150px);
+
+    line-height: 0.9;
+
+    letter-spacing: 14px;
+
+    margin: 0;
+
+    font-weight: 900;
+
+    color: white;
+
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.7),
+        0 0 25px rgba(204, 170, 255, 0.7),
+        0 0 50px rgba(160, 110, 255, 0.5);
+
+    position: relative;
+}
+
+
+/* =========================
+   WORLD
+========================= */
+
+h2 {
+
+    font-family: "Cinzel", serif;
+
+    font-size: clamp(40px, 6vw, 75px);
+
+    letter-spacing: 20px;
+
+    line-height: 1;
+
+    margin-top: 10px;
+
+    margin-right: -20px;
+
+    margin-bottom: 30px;
+
+    font-weight: 800;
+
+    color: white;
+
+    transform: rotate(-8deg);
+
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.7),
+        0 0 25px rgba(196, 155, 255, 0.7);
+
+    position: relative;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo-container {
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    margin-top: 5px;
+
+    width: 200px;
+    height: 200px;
+}
+
+
+/* brilho atrás da logo */
+
+.logo-container::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 170px;
+    height: 170px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    filter: blur(25px);
+
+    animation: brilho-logo 3s ease-in-out infinite;
+}
+
+
+/* imagem */
+
+.logo {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 165px;
+
+    filter:
+        drop-shadow(0 0 8px rgba(255, 255, 255, 0.4))
+        drop-shadow(0 0 20px rgba(255, 255, 255, 0.3));
+
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+
+/* =========================
+   CLIQUE PARA ENTRAR
+========================= */
+
+.entrada {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-top: 45px;
+}
+
+
+.entrada p {
+
+    font-size: 13px;
+
+    letter-spacing: 5px;
+
+    font-weight: 400;
+
+    color: white;
+
+    opacity: 0.9;
+
+    animation: piscar 2s infinite;
+}
+
+
+.entrada span {
+
+    width: 70px;
+
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    position: relative;
+}
+
+
+/* pequeno brilho nas pontas */
+
+.entrada span::after {
+
+    content: "✦";
+
+    position: absolute;
+
+    color: white;
+
+    font-size: 10px;
+
+    top: -7px;
+}
+
+
+.entrada span:first-child::after {
+
+    right: -5px;
+}
+
+
+.entrada span:last-child::after {
+
+    left: -5px;
+}
+
+
+/* =========================
+   ÓRBITAS
+========================= */
+
+.orbita {
+
+    position: absolute;
+
+    border: 1px solid rgba(255, 255, 255, 0.20);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* órbita maior */
+
+.orbita-1 {
+
+    width: 950px;
+    height: 280px;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(-12deg);
+}
+
+
+/* órbita menor */
+
+.orbita-2 {
+
+    width: 700px;
+    height: 210px;
+
+    top: 52%;
+
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(20deg);
+
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================
+   PONTOS DE LUZ
+========================= */
+
+.luz {
+
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow:
+        0 0 8px white,
+        0 0 18px rgba(220, 190, 255, 0.9);
+
+    animation: brilho 2.5s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+
+.luz-1 {
+
+    top: 25%;
+    left: 18%;
+}
+
+
+.luz-2 {
+
+    top: 22%;
+    right: 20%;
+
+    animation-delay: 0.8s;
+}
+
+
+.luz-3 {
+
+    bottom: 23%;
+    left: 15%;
+
+    animation-delay: 1.4s;
+}
+
+
+/* =========================
+   ANIMAÇÃO DE ENTRADA
+========================= */
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px) scale(0.97);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =========================
+   LOGO FLUTUANDO
+========================= */
+
+@keyframes flutuar {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(-5deg);
+    }
+
+    50% {
+
+        transform:
+            translateY(-12px)
+            rotate(5deg);
+    }
+
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(-5deg);
+    }
+}
+
+
+/* =========================
+   BRILHO DA LOGO
+========================= */
+
+@keyframes brilho-logo {
+
+    0% {
+
+        opacity: 0.3;
+
+        transform: scale(0.9);
+    }
+
+    50% {
+
+        opacity: 0.7;
+
+        transform: scale(1.1);
+    }
+
+    100% {
+
+        opacity: 0.3;
+
+        transform: scale(0.9);
+    }
+}
+
+
+/* =========================
+   TEXTO PISCANDO
+========================= */
+
+@keyframes piscar {
+
+    0%,
+    100% {
+
+        opacity: 0.5;
+    }
+
+    50% {
+
+        opacity: 1;
+    }
+}
+
+
+/* =========================
+   PONTOS DE LUZ
+========================= */
+
+@keyframes brilho {
+
+    0%,
+    100% {
+
+        opacity: 0.3;
+
+        transform: scale(0.7);
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform: scale(1.5);
+    }
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 768px) {
+
+    h1 {
+
+        font-size: 65px;
+
+        letter-spacing: 8px;
+    }
+
+    h2 {
+
+        font-size: 38px;
+
+        letter-spacing: 12px;
+
+        margin-right: -12px;
+    }
+
+    .logo-container {
+
+        width: 150px;
+        height: 150px;
+    }
+
+    .logo {
+
+        width: 130px;
+    }
+
+    .orbita-1 {
+
+        width: 600px;
+        height: 200px;
+    }
+
+    .orbita-2 {
+
+        width: 450px;
+        height: 160px;
+    }
+
+    .entrada {
+
+        margin-top: 30px;
+
+        gap: 10px;
+    }
+
+    .entrada p {
+
+        font-size: 10px;
+
+        letter-spacing: 3px;
+    }
+
+    .entrada span {
+
+        width: 35px;
+    }
+}
