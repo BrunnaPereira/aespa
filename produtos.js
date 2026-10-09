@@ -203,7 +203,7 @@ document.getElementById("finalizar-compra").addEventListener("click", () => {
         return;
     }
 
-    const numeroWhatsApp = "5511999999999"; // Troque pelo número correto da loja.
+    const numeroWhatsApp = "99999999999999999"; // Troque pelo número correto da loja.
 
     const resumo = carrinho.map(item =>
         `${item.nome} x${item.quantidade} - ${moeda(item.preco * item.quantidade)}`
