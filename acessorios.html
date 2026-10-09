@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AESPA | ACESSÓRIOS</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Estilos compartilhados da Home -->
+    <link rel="stylesheet" href="layout.css">
+
+    <!-- Estilos específicos dos produtos -->
+    <link rel="stylesheet" href="produtos.css">
+
+    <script src="produtos.js" defer></script>
+</head>
+
+<body data-categoria="Acessórios">
+
+    <!-- NAVBAR: igual à Home -->
+    <header class="navbar">
+
+        <nav class="menu esquerda">
+            <a href="home.html">HOME</a>
+            <a href="photocards.html">PHOTOCARDS</a>
+            <a href="bonecas.html">BONECAS</a>
+        </nav>
+
+        <a href="home.html" class="logo-menu">
+            KWANGYA
+        </a>
+
+        <nav class="menu direita">
+            <a href="roupas.html">ROUPAS</a>
+            <a href="bolsas.html">BOLSAS</a>
+            <a href="acessorios.html">ACESSÓRIOS</a>
+        </nav>
+
+    </header>
+
+    <!-- CONTEÚDO DOS PRODUTOS -->
+    <main class="pagina-produtos">
+
+        <section class="titulo-produtos">
+            <p class="mini-titulo">KWANGYA WORLD</p>
+            <h1>ACESSÓRIOS</h1>
+            <p>Encontre seus favoritos e complete sua coleção.</p>
+        </section>
+
+        <section class="area-catalogo">
+
+            <div class="cabecalho-catalogo">
+                <h2>Nossa coleção</h2>
+
+                <button class="botao-carrinho" id="abrir-carrinho" type="button">
+                    CARRINHO (<span id="quantidade-carrinho">0</span>)
+                </button>
+            </div>
+
+            <div class="grade-produtos" id="grade-produtos">
+                <!-- Os produtos serão inseridos pelo JavaScript -->
+            </div>
+
+        </section>
+
+        <!-- CARRINHO -->
+        <aside class="painel-carrinho" id="painel-carrinho" aria-label="Carrinho de compras" hidden>
+
+            <div class="topo-carrinho">
+                <h2>Seu carrinho</h2>
+
+                <button id="fechar-carrinho" class="fechar-carrinho" type="button"
+                    aria-label="Fechar carrinho">
+                    &times;
+                </button>
+            </div>
+
+            <div id="itens-carrinho" class="itens-carrinho">
+                <!-- Os itens serão inseridos pelo JavaScript -->
+            </div>
+
+            <div class="total-carrinho">
+                <span>Total:</span>
+                <strong id="total-carrinho">R$ 0,00</strong>
+            </div>
+
+            <button id="finalizar-compra" class="botao-finalizar" type="button">
+                FINALIZAR COMPRA
+            </button>
+
+        </aside>
+
+    </main>
+
+    <!-- RODAPÉ: igual à Home -->
+    <footer class="rodape">
+
+        <div class="rodape-logo">
+            <h2>KWANGYA</h2>
+            <p>DREAMS COME TRUE</p>
+        </div>
+
+        <div class="rodape-links">
+
+            <div>
+                <a href="home.html">HOME</a>
+            </div>
+
+            <div>
+                <a href="#">SOBRE NÓS: TRABALHO DE CONCLUSÃO DA AV1</a>
+                <a href="#">CONTATO: contato@kwangya.com (FAKE)</a>
+            </div>
+
+        </div>
+
+        <div class="redes">
+            <a href="#">Instagram: @kwangya_world (FAKE)</a>
+            <a href="#">TikTok: @kwangya_world (FAKE)</a>
+            <a href="#">YouTube: KWANGYA World (FAKE)</a>
+        </div>
+
+        <div class="copyright">
+            © 2026 KWANGYA WORLD. TODOS OS DIREITOS RESERVADOS.
+        </div>
+
+    </footer>
+
+</body>
+</html>

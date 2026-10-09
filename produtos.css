@@ -1,0 +1,512 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #eee6ff;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    height: 85px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 45px;
+    background: rgba(48, 28, 91, 0.90);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+    width: 40%;
+}
+
+.menu.esquerda {
+    justify-content: flex-end;
+    padding-right: 30px;
+}
+
+.menu.direita {
+    justify-content: flex-start;
+    padding-left: 30px;
+}
+
+.menu a {
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    transition: 0.3s;
+    position: relative;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -8px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+.menu a:hover {
+    text-shadow:
+        0 0 8px white,
+        0 0 15px #b993ff;
+}
+
+.logo-menu {
+    width: 20%;
+    text-align: center;
+    font-family: "Cinzel", serif;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: white;
+    text-shadow:
+        0 0 8px rgba(255, 255, 255, 0.8),
+        0 0 25px rgba(190, 145, 255, 0.8);
+    transition: 0.3s;
+}
+
+.logo-menu:hover {
+    transform: scale(1.04);
+}
+
+/* RODAPÉ */
+.rodape {
+    background-color: #281542;
+    min-height: 260px;
+    padding: 55px 7% 25px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 40px;
+    position: relative;
+}
+
+.rodape-logo h2 {
+    font-family: "Cinzel", serif;
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+
+.rodape-logo p {
+    font-size: 9px;
+    letter-spacing: 4px;
+    margin-top: 5px;
+    opacity: 0.6;
+}
+
+.rodape-links {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.rodape-links div {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.rodape-links a {
+    font-size: 11px;
+    letter-spacing: 1px;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.rodape-links a:hover {
+    opacity: 1;
+    transform: translateX(4px);
+}
+
+.redes {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.redes a {
+    font-size: 10px;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.redes a:hover {
+    opacity: 1;
+}
+
+.copyright {
+    grid-column: 1 / -1;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 22px;
+    text-align: center;
+    font-size: 9px;
+    letter-spacing: 2px;
+    opacity: 0.5;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1000px) {
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .menu a {
+        font-size: 9px;
+    }
+
+    .logo-menu {
+        font-size: 30px;
+    }
+
+    .rodape {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .rodape-links {
+        justify-content: center;
+    }
+
+    .redes {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        height: auto;
+        min-height: 70px;
+        flex-wrap: wrap;
+        padding: 15px;
+    }
+
+    .logo-menu {
+        order: -1;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .menu {
+        width: 50%;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .menu.esquerda,
+    .menu.direita {
+        padding: 0;
+        justify-content: center;
+    }
+
+    .rodape-links {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+
+
+/* TÍTULO DA CATEGORIA */
+.pagina-produtos {
+    min-height: 65vh;
+    color: #38205e;
+}
+
+.titulo-produtos {
+    padding: 65px 20px 50px;
+    text-align: center;
+    background:
+        radial-gradient(circle at 50% 30%, #d5b9ff, transparent 55%),
+        linear-gradient(135deg, #eee6ff, #d7c2f5);
+}
+
+.titulo-produtos .mini-titulo {
+    font-size: 12px;
+    letter-spacing: 6px;
+    margin-bottom: 15px;
+}
+
+.titulo-produtos h1 {
+    font-family: "Cinzel", serif;
+    font-size: clamp(42px, 7vw, 85px);
+    letter-spacing: 5px;
+    line-height: 1.1;
+    text-shadow: 0 4px 15px rgba(91, 60, 145, 0.2);
+}
+
+.titulo-produtos > p:last-child {
+    margin-top: 18px;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* CATÁLOGO */
+.area-catalogo {
+    max-width: 1450px;
+    width: 92%;
+    margin: 45px auto 80px;
+}
+
+.cabecalho-catalogo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.cabecalho-catalogo h2 {
+    font-family: "Cinzel", serif;
+    font-size: 25px;
+}
+
+.botao-carrinho,
+.botao-finalizar {
+    border: none;
+    padding: 14px 22px;
+    background: #38205e;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-carrinho:hover,
+.botao-finalizar:hover {
+    background: #704bb0;
+    transform: translateY(-2px);
+}
+
+/* CARDS DOS PRODUTOS */
+.grade-produtos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.produto-card {
+    overflow: hidden;
+    background: white;
+    border: 1px solid rgba(56, 32, 94, 0.12);
+    border-radius: 8px;
+    color: #38205e;
+    transition: 0.3s;
+}
+
+.produto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(56, 32, 94, 0.15);
+}
+
+.produto-card img {
+    width: 100%;
+    height: 270px;
+    display: block;
+    object-fit: cover;
+    background: #e5d8f7;
+}
+
+.produto-info {
+    padding: 18px;
+}
+
+.produto-info h3 {
+    font-family: "Cinzel", serif;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.produto-preco {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.adicionar-carrinho {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #38205e;
+    background: transparent;
+    color: #38205e;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.adicionar-carrinho:hover {
+    background: #38205e;
+    color: white;
+}
+
+/* PAINEL DO CARRINHO */
+.painel-carrinho {
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    right: 0;
+    width: min(420px, 100%);
+    height: 100vh;
+    padding: 30px;
+    overflow-y: auto;
+    background: #f8f4ff;
+    color: #38205e;
+    box-shadow: -10px 0 40px rgba(25, 10, 45, 0.2);
+}
+
+.painel-carrinho[hidden] {
+    display: none;
+}
+
+.topo-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.topo-carrinho h2 {
+    font-family: "Cinzel", serif;
+}
+
+.fechar-carrinho {
+    border: none;
+    background: none;
+    color: #38205e;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.item-carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd0ef;
+}
+
+.item-carrinho h3 {
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.item-carrinho p {
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.controles-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.controles-item button {
+    padding: 3px 8px;
+    border: 1px solid #38205e;
+    background: white;
+    color: #38205e;
+    cursor: pointer;
+}
+
+.remover-item {
+    border: none;
+    background: none;
+    color: #8753b5;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.total-carrinho {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+    font-size: 16px;
+}
+
+.botao-finalizar {
+    width: 100%;
+}
+
+.carrinho-vazio {
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1000px) {
+    .grade-produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .produto-card img {
+        height: 240px;
+    }
+}
+
+@media (max-width: 650px) {
+    .titulo-produtos {
+        padding: 45px 15px;
+    }
+
+    .titulo-produtos h1 {
+        letter-spacing: 2px;
+    }
+
+    .cabecalho-catalogo {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .grade-produtos {
+        grid-template-columns: 1fr;
+    }
+
+    .produto-card img {
+        height: 300px;
+    }
+
+    .painel-carrinho {
+        padding: 22px;
+    }
+}
