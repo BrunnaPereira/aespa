@@ -1,40 +1,40 @@
 
 const catalogo = {
     "Photocards": [
-        { id: "pc1", nome: "Photocard Karina", preco: 15.00, imagem: "img/cards/1.jpg" },
-        { id: "pc2", nome: "Photocard Winter", preco: 15.00, imagem: "img/cards/2.jpg" },
-        { id: "pc3", nome: "Photocard Giselle", preco: 15.00, imagem: "img/cards/3.jpg" },
-        { id: "pc4", nome: "Photocard Ningning", preco: 15.00, imagem: "img/cards/4.jpg" },
-        { id: "pc5", nome: "Photocard Ningning", preco: 15.00, imagem: "img/cards/5.jpg" },
-        { id: "pc6", nome: "Photocard Ningning", preco: 15.00, imagem: "img/cards/6.jpg" }
+        { id: "pc1", nome: "Photocard Karina", preco: 40.00, imagem: "img/cards/1.jpg" },
+        { id: "pc2", nome: "Photocard Giselle", preco: 35.00, imagem: "img/cards/2.jpg" },
+        { id: "pc3", nome: "Photocard Winter", preco: 75.00, imagem: "img/cards/3.jpg" },
+        { id: "pc4", nome: "Photocard Ningning", preco: 60.00, imagem: "img/cards/4.jpg" },
+        { id: "pc5", nome: "Photocard Karina", preco: 60.00, imagem: "img/cards/5.jpg" },
+        { id: "pc6", nome: "Photocard Giselle", preco: 25.00, imagem: "img/cards/6.jpg" }
     ],
 
     "Bonecas": [
-        { id: "bn1", nome: "Boneca Karina", preco: 85.00, imagem: "img/bn/1.jpg" },
-        { id: "bn2", nome: "Boneca Winter", preco: 85.00, imagem: "img/bn/2.jpg" },
-        { id: "bn3", nome: "Boneca Giselle", preco: 85.00, imagem: "img/bn/3.jpg" },
-        { id: "bn4", nome: "Boneca Ningning", preco: 85.00, imagem: "img/bn/4.jpg" }
+        { id: "bn1", nome: "Boneca Giselle", preco: 240.00, imagem: "img/bn/1.jpg" },
+        { id: "bn2", nome: "Boneca Winter", preco: 240.00, imagem: "img/bn/2.jpg" },
+        { id: "bn3", nome: "Boneca Karina", preco: 240.00, imagem: "img/bn/3.jpg" },
+        { id: "bn4", nome: "Boneca Ningning", preco: 240.00, imagem: "img/bn/4.jpg" }
     ],
 
     "Roupas": [
         { id: "rp1", nome: "Camiseta KWANGYA", preco: 65.00, imagem: "img/rp/1.jpg" },
-        { id: "rp2", nome: "Camiseta KWANGYA", preco: 120.00, imagem: "img/rp/2.jpg" },
+        { id: "rp2", nome: "Camiseta KWANGYA (cada)", preco: 340.00, imagem: "img/rp/2.jpg" },
         { id: "rp3", nome: "Camisa KWANGYA", preco: 150.00, imagem: "img/rp/3.jpg" },
         { id: "rp4", nome: "Camiseta KWANGYA", preco: 80.00, imagem: "img/rp/4.jpg" }
     ],
 
     "Bolsas": [
-        { id: "bl1", nome: "Bolsas KWANGYA", preco: 75.00, imagem: "img/bl/1.jpg" },
+        { id: "bl1", nome: "Bolsas KWANGYA", preco: 95.00, imagem: "img/bl/1.jpg" },
         { id: "bl2", nome: "Bolsa branca", preco: 90.00, imagem: "img/bl/2.jpg" },
         { id: "bl3", nome: "Bolsa couro", preco: 90.00, imagem: "img/bl/3.jpg" },
-        { id: "bl4", nome: "Bolsa jeans", preco: 90.00, imagem: "img/bl/4.jpg" }
+        { id: "bl4", nome: "Bolsa jeans", preco: 430.00, imagem: "img/bl/4.jpg" }
     ],
 
     "Acessórios": [
-        { id: "ac1", nome: "Kit Acessórios KWANGYA", preco: 20.00, imagem: "img/ac/1.jpg" },
-        { id: "ac2", nome: "Bastão de Luz KWANGYA", preco: 25.00, imagem: "img/ac/2.jpg" },
-        { id: "ac3", nome: "Bracelete KWANGYA", preco: 25.00, imagem: "img/ac/3.jpg" },
-        { id: "ac4", nome: "Presilhas KWANGYA", preco: 25.00, imagem: "img/ac/4.jpg" }
+        { id: "ac1", nome: "Kit Acessórios KWANGYA", preco: 225.00, imagem: "img/ac/1.jpg" },
+        { id: "ac2", nome: "Bastão de Luz KWANGYA", preco: 530.00, imagem: "img/ac/2.jpg" },
+        { id: "ac3", nome: "Bracelete KWANGYA", preco: 130.00, imagem: "img/ac/3.jpg" },
+        { id: "ac4", nome: "Presilhas KWANGYA", preco: 85.00, imagem: "img/ac/4.jpg" }
     ]
 };
 
